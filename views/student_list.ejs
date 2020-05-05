@@ -1,0 +1,23 @@
+<h1>
+    Students List
+</h1>
+<div>
+        <ul>
+            <% for(let i of student_list) { %>
+                <li>
+                    <div>
+                        <p><%= i.id %></p>
+                        <p><%= i.name %></p>
+                        <p><%= i.college %></p>
+                        <p><%= i.status %></p>
+                        <p><%= i.dsascore %></p>
+                        <p><%= i.webscore %></p>
+                        <p><%= i.reactscore %></p>
+                        <p><%= i.interviewdate %></p>
+                        <p><%= i.company %></p>
+                        <p><%= i.result %></p>
+                    </div>
+                </li>
+            <%}%>
+        </ul>
+</div>

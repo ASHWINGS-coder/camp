@@ -1,0 +1,33 @@
+<h1>
+    Interview
+</h1>
+
+<div>
+    <ul>
+        <div>
+            <% for (let i of interview_list) {%>
+                <div>
+                    <p><%= i.id %></p>
+                    <p><%= i.name %></p>
+                    <p><%= i.company %></p>
+                    <p><%= i.date %></p>
+                    <p><%= i.result %></p>
+                </div>
+            <%}%>
+        </div>
+    </ul>
+</div>
+
+<form action="/interview/addinterview" method="POST">
+    <input type="text" name="id" placeholder="id"  required>
+    <input type="text" name="name" placeholder="name"  required>
+    <input type="text" name="company" placeholder="company"  required>
+     <input type="date" name="date" id="date">
+     <select name="status" required>
+        <option value="">--Please choose an option--</option>
+        <option value="Selected">Selected</option>
+        <option value="Rejected">Rejected</option>
+        <option value="onhold">On Hold</option>
+    </select> 
+    <button type="submit">Schedule</button>
+</form>
